@@ -1,9 +1,12 @@
 @import './base.css';
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300&family=Playfair+Display&display=swap');
 
-#app {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+ #app {
+  /* max-width: 1280px; */
+  max-width: 100%;
+  margin:  auto;
+  padding: 0rem;
 
   font-weight: normal;
 }
@@ -17,14 +20,17 @@ a,
 
 @media (hover: hover) {
   a:hover {
-    background-color: hsla(160, 100%, 37%, 0.2);
+    text-decoration: none;
+    color: #fff;
+    /* color:hsla(160, 46%, 70%, 0.2) ; */
+    /* background-color: hsla(160, 100%, 37%, 0.2); */
   }
 }
 
-@media (min-width: 1024px) {
+@media (max-width: 100%) {
   body {
     display: flex;
-    place-items: center;
+    place-items: flex-start;
   }
 
   #app {
@@ -32,4 +38,4 @@ a,
     grid-template-columns: 1fr 1fr;
     padding: 0 2rem;
   }
-}
+} 

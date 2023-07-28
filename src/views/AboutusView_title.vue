@@ -7,7 +7,7 @@
     <!-- Your component's content goes here -->
     <!-- For example, you can have some content related to the header -->
     <div class='main_title'>
-      <p >Home</p>
+      <p >About our story</p>
     </div>
     
   </div>
