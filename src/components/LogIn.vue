@@ -9,7 +9,7 @@
             <img class="w-32 h-32" src="../assets/dine ease logo color.png" alt="">
           </div>
           <div class="sign-up-form w-2/3 ">
-            <h1 class="font-sans text-3xl text-center font-semibold pb-4 ">Log in</h1>
+            <h1 class="font-sans text-3xl text-center font-semibold pb-4 ">Log In</h1>
             <label for="reg-form" class="text-gray-700 pt-3 font-medium text-sm">Email</label><br>
             <input type="text" class="w-full border-lgray border-2 rounded-md p-1 hover:border-green"><br>
             <label for="reg-form" class="text-gray-700 pt-3 font-medium text-sm">Password</label><br>
