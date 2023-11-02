@@ -1,0 +1,120 @@
+{
+  "menu": [
+    {
+      "id": 1,
+      "title": "Pizza",
+      "name": "Margherita",
+      "price": 1000,
+      "image": "../src/assets/images/jason-leung-poI7DelFiVA-unsplash (1).jpg"
+    },
+    {
+      "id": 2,
+      "title": "Burger",
+      "name": "Vegetarian",
+      "price": 800,
+      "image": "../src/assets/images/jason-leung-poI7DelFiVA-unsplash (1).jpg"
+    },
+    {
+      "id": 3,
+      "title": "Pasta",
+      "name": "Cheese",
+      "price": 1200,
+      "image": "../src/assets/images/jason-leung-poI7DelFiVA-unsplash (1).jpg"
+    },
+    {
+      "id": 4,
+      "title": "Salad",
+      "name": "Chicken",
+      "price": 700,
+      "image": "../src/assets/images/jason-leung-poI7DelFiVA-unsplash (1).jpg"
+    },
+    {
+      "id": 5,
+      "title": "Steak",
+      "name": "Beef",
+      "price": 1500,
+      "image": "../src/assets/images/jason-leung-poI7DelFiVA-unsplash (1).jpg"
+    },
+    {
+      "id": 6,
+      "title": "Sandwich",
+      "name": "Ham",
+      "price": 500,
+      "image": "../src/assets/images/jason-leung-poI7DelFiVA-unsplash (1).jpg"
+    },
+    {
+      "id": 7,
+      "title": "Taco",
+      "name": "Fish",
+      "price": 1000,
+      "image": "../src/assets/images/jason-leung-poI7DelFiVA-unsplash (1).jpg"
+    },
+    {
+      "id": 8,
+      "title": "Sushi",
+      "name": "Salmon",
+      "price": 2000,
+      "image": "../src/assets/images/jason-leung-poI7DelFiVA-unsplash (1).jpg"
+    },
+    {
+      "id": 9,
+      "title": "Ramen",
+      "name": "Pork",
+      "price": 1200,
+      "image": "../src/assets/images/jason-leung-poI7DelFiVA-unsplash (1).jpg"
+    },
+    {
+      "id": 10,
+      "title": "Curry",
+      "name": "Chicken",
+      "price": 1400,
+      "image": "../src/assets/images/jason-leung-poI7DelFiVA-unsplash (1).jpg"
+    },
+    {
+      "title": "Vinoli Soup",
+      "name": "Starters",
+      "description": "",
+      "price": "1500",
+      "image": "../src/assets/images/jason-leung-poI7DelFiVA-unsplash (1).jpg",
+      "id": 11
+    },
+    {
+      "title": "ff",
+      "name": "Starters",
+      "description": "",
+      "price": "1600",
+      "id": 12
+    },
+    {
+      "title": "Meatloaf",
+      "name": "Side dishes",
+      "description": "",
+      "price": "1110",
+      "id": 13
+    }
+  ],
+  "upload-image": [
+    {
+      "id": 1
+    },
+    {
+      "id": 2
+    },
+    {
+      "id": 3
+    }
+  ],
+  "users": [
+    {
+      "username": "username",
+      "name": "Induwara Pathirana",
+      "address": "address",
+      "phone": "0703417747",
+      "email": "induwara1203@gmail.com",
+      "authentication": {
+        "password": "$2a$10$rcVlrHKS2.dkd1b8owkqnOoiOSJhYvAsgRhxIrPbFkF2COlO0JN1C"
+      },
+      "id": 1
+    }
+  ]
+}

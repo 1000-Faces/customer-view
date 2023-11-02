@@ -1,85 +1,91 @@
-<script setup lang="ts">
-import { RouterLink, RouterView } from 'vue-router'
-import HelloWorld from './components/HelloWorld.vue'
-</script>
-
 <template>
-  <header>
-    <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
-
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
-
-      <nav>
-        <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/about">About</RouterLink>
-      </nav>
-    </div>
-  </header>
-
-  <RouterView />
+  <div class="flex flex-col min-h-screen font-sans">
+    <component :is="navbarComponent" />
+    <router-view></router-view> 
+    <widget-container-modal />
+  </div>
 </template>
 
-<style scoped>
-header {
-  line-height: 1.5;
-  max-height: 100vh;
-}
+<script lang="ts">
+import { defineComponent, ref } from 'vue';
+import NavBar from './components/NavBar/NavBar.vue';
+import MgNavBar from './components/NavBar/MgNavBar.vue';
+import StatNavBar from './components/NavBar/StaticNavBar.vue';
+import logNavBar from './components/NavBar/logNavBar.vue';
+import Home from './components/Home.vue';
+import UserHome from './components/UserHome.vue';
+import LogIn from './components/login.vue'
+import ManagerHome from './components/Manager/ManagerHome.vue'
+import AcceptOrder1 from './components/Manager/orders/acceptOrder1.vue'
+import AcceptOrder2 from './components/Manager/orders/acceptOrder2.vue'
+import Login from './components/login.vue'
+import Menu from './components/Customer/MenuView.vue'
+import Cart from './components/Customer/CartView.vue'
+import Checkout from  './components/Customer/CheckoutView.vue'
+import Reservation from './components/Manager/reservations/reservation.vue'
+//import AcceptOrder from './components/Manager/acceptOrder.vue'
+import Reservations from './components/Customer/Reservations.vue'
+import ProfileSideNav from './components/Customer/ProfileSideNav.vue'
+import UserNavBar from './components/NavBar/UserNavbar.vue'
+import UserProfile from './components/Customer/UserProfileDashboard.vue'
+import addFood from './components/Manager/addFood.vue'
+import addMeal from './components/Manager/addMeal.vue'
+import { container } from 'jenesius-vue-modal';
+import axios from 'axios';
 
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
-}
+export default defineComponent({
+  components: {
+    Home,
+    NavBar,
+    MgNavBar,
+    StatNavBar,
+    logNavBar,
+    Menu,
+    Cart,
+    Checkout,
+    Reservation,
+    Login,
+    ManagerHome,
+    ProfileSideNav,
+    Reservations,
+    UserProfile,
+    WidgetContainerModal: container,
+    UserHome,
+    AcceptOrder1,
+    AcceptOrder2,
+    Menu,
+    Cart,
+    Checkout,
+    addFood,
+    addMeal
+    //baseInput
+  },
+  data() {
+    return {
+      userRole: '', // Replace with actual user role logic
+    };
+  },
+  computed: {
+    navbarComponent() {
+      switch (this.userRole) {
+        case 'guest':
+          return 'NavBar';
+        case 'manager':
+          return 'MgNavBar';
+        case 'user':
+          return 'StatNavbar';
+        default:
+          return ''; // Default to user navbar if role is unknown
+      }
+    },
+  },
+  created() {
+    const token = localStorage.getItem('token');
+    if (token) {
+      axios.defaults.headers.common['Authorization'] = `Bearer ${token}`;
+    }
+  },
+});
+</script>
 
-nav {
-  width: 100%;
-  font-size: 12px;
-  text-align: center;
-  margin-top: 2rem;
-}
-
-nav a.router-link-exact-active {
-  color: var(--color-text);
-}
-
-nav a.router-link-exact-active:hover {
-  background-color: transparent;
-}
-
-nav a {
-  display: inline-block;
-  padding: 0 1rem;
-  border-left: 1px solid var(--color-border);
-}
-
-nav a:first-of-type {
-  border: 0;
-}
-
-@media (min-width: 1024px) {
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
-  }
-
-  .logo {
-    margin: 0 2rem 0 0;
-  }
-
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  }
-
-  nav {
-    text-align: left;
-    margin-left: -1rem;
-    font-size: 1rem;
-
-    padding: 1rem 0;
-    margin-top: 1rem;
-  }
-}
-</style>
+<style src="./assets/main.css"/>
